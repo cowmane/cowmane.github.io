@@ -1,1 +1,22 @@
+#shark {
+    left: 100px;
+    top: 400px;
+    position: absolute;
+    
+    /* Các thuộc tính animation mới */
+    animation-name: Shark;              /* Tên keyframe đã định nghĩa */
+    animation-duration: 10s;            /* Thời gian hoàn thành 1 chu kỳ: 10 giây */
+    animation-timing-function: linear;  /* Tốc độ đều */
+    animation-iteration-count: infinite; /* Lặp lại vô hạn */
+    animation-play-state: running;      /* Bắt đầu chạy ngay */
+}
 
+@keyframes Shark {
+    0%   {left:100px; top:400px;}
+    20%  {left:300px; top:400px;}
+    40%  {left:500px; top:300px;}
+    50%  {left:600px; top:500px;}
+    60%  {left:500px; top:200px;}
+    80%  {left:300px; top:100px; transform:scaleX(-1);}
+    100% {left:100px; top:400px; transform:scaleX(-1);}
+}
